@@ -10,9 +10,11 @@ script:
   - python setup.py test
 
 deploy:
-  provider: releases
-  api_key:
-    secure: L0MF+DABWi/fdTVLkkrJcpyrHBMrz6TOerQgRXk9SLrNaonAlxDDs3t3hkkOITdsSES5uXaV693a//yYKxASlMpt9Y8cZhzKsi4A/WwTf9ywukOjy/hgOfERLOL3cN87ypkCY8xZ3mxTO2EGnauEsHQicj0OCdkwezM/5nPWvHhT6mgFArZ3AxJRcUBsMueK1ZcJGwy0CcqJ0RaOM7veQO6xBAoKh6TXZWlsd+1vjQ6Su5jnj2bX+u1AMiZKWzRc0RRyUVZXk6m5o117r92Mmqy5B7XMtHLvgej8Rz8TGDyBPaLZHw8PVxnNTrBBCI1fVTcYGnDPLDDremfsTNBLHQsl8nT6BK6/Qv4GKCW1iepH1VL4cPisn0jv41FmCvbHio2GZ057F3J3D0CadJAIMaRYKcf9NI/SCbHN+jY7liNBcbaWG7U0zObwfnSt4DV8cfLjif2nBmfPMp+xC67b9fZy0d9it1d0UQf6tpQj1q3uTBJnLsb9xgzGFPcGYzvgEKZmP+3eluWBe0PRMNQPCBgT87INrv3v4l/ojbnIZP44Ws6XnZYNIt2CqxotapoPYzJwuf4abM8kAvV80DsuAGzI+PhYFLEzumE0fJqsUAjS5HUwwlDoUKWu1TTR8dYqGDZDKfEZj7Lz5v3jJok5dc9k9uYKu6RvGT9gEV74oFE=
-  file: dist/*
-  on:
-    repo: simplereach/nsq2kafka
+  - provider: releases
+    skip_cleanup: true
+    file_glob: true
+    api_key:
+      secure: L0MF+DABWi/fdTVLkkrJcpyrHBMrz6TOerQgRXk9SLrNaonAlxDDs3t3hkkOITdsSES5uXaV693a//yYKxASlMpt9Y8cZhzKsi4A/WwTf9ywukOjy/hgOfERLOL3cN87ypkCY8xZ3mxTO2EGnauEsHQicj0OCdkwezM/5nPWvHhT6mgFArZ3AxJRcUBsMueK1ZcJGwy0CcqJ0RaOM7veQO6xBAoKh6TXZWlsd+1vjQ6Su5jnj2bX+u1AMiZKWzRc0RRyUVZXk6m5o117r92Mmqy5B7XMtHLvgej8Rz8TGDyBPaLZHw8PVxnNTrBBCI1fVTcYGnDPLDDremfsTNBLHQsl8nT6BK6/Qv4GKCW1iepH1VL4cPisn0jv41FmCvbHio2GZ057F3J3D0CadJAIMaRYKcf9NI/SCbHN+jY7liNBcbaWG7U0zObwfnSt4DV8cfLjif2nBmfPMp+xC67b9fZy0d9it1d0UQf6tpQj1q3uTBJnLsb9xgzGFPcGYzvgEKZmP+3eluWBe0PRMNQPCBgT87INrv3v4l/ojbnIZP44Ws6XnZYNIt2CqxotapoPYzJwuf4abM8kAvV80DsuAGzI+PhYFLEzumE0fJqsUAjS5HUwwlDoUKWu1TTR8dYqGDZDKfEZj7Lz5v3jJok5dc9k9uYKu6RvGT9gEV74oFE=
+    file: dist/*
+    on:
+      tags: true

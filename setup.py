@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import subprocess
 
-
+# Set the version according to GitHub Releases
 p = subprocess.Popen(["git", "describe", "--always", "--tag"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 output, errors = p.communicate()
 if not errors:

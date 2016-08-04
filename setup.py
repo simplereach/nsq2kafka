@@ -15,7 +15,7 @@ setup(
     name='nsq2kafka',
     version=__version__,
     description="Reads from NSQ, Publishes to Kafka",
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     keywords=['NSQ', 'Kafka'],
     author='Russ Bradberry',
     author_email='rbradberry@simplereach.com',

@@ -53,4 +53,4 @@ def main():
     nsq2kafka.start()
 
 if __name__ == '__main__':
-    exit(main())
+    main()

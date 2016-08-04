@@ -31,6 +31,6 @@ setup(
         "kafka-python==1.2.5"
     ],
     entry_points={
-        'console_scripts': ['nsq2kafka = nsq2kafka.cmdline:main']
+        'console_scripts': ['nsq2kafka = nsq2kafka.__main__:main']
     },
 )

@@ -11,8 +11,6 @@ if not errors:
 else:
     __version__ = '0.0.0'
 
-__version__ = '0.0.1'
-
 setup(
     name='nsq2kafka',
     version=__version__,
